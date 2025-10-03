@@ -12,4 +12,14 @@ A shard is a feature, class or sublibrary containing one or more functions/class
 
 ### Features
 *An up to date list of all shards*
-* Logger Shard (`from shards import sLogger`) - 
+* Logger Shard (`from shards import sLogger`) - Docs coming soon
+
+    A simple logging shard with coloured output and file saving based on timestamps
+
+* (Planned) YaCfg Shard (`from shards import yacfg`) - Docs coming soon
+
+    YaCfg is a simple shard for converting config files (YAML / TOML) into python objects. Has support for Logging trough the logger shard
+
+* (Planned) MDL Shard (`from shards.math import mdl`) - Docs coming soon
+
+    MDL (standing for MultiDimensional Lists) is a small shard containing classes for creating multidimensional lists and using them (similar to other lower level languages)
