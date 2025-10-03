@@ -1,16 +1,16 @@
-from shards import sLogger
+from shards import logger
 from pathlib import Path
 
-logger = sLogger("Test", do_log_saving=True, log_save_folder="tmp/log")
+test_logger = logger("Test", do_log_saving=True, log_save_folder="tmp/log")
 
 def test_log_messages():
-    logger.raw("a")
-    logger.info("info")
-    logger.warn("warn")
-    logger.error("error")
-    logger.critical("critical")
+    test_logger.raw("a")
+    test_logger.info("info")
+    test_logger.warn("warn")
+    test_logger.error("error")
+    test_logger.critical("critical")
 
-    log_file = Path(logger.save_folder) / f"{logger.start_timestamp}.log"
+    log_file = Path(test_logger.save_folder) / f"{test_logger.start_timestamp}.log"
     with open(log_file, "r") as f:
         lines = f.readlines()
 
