@@ -6,6 +6,9 @@ Logs are written that newest versions are at the top!
 * Added MDL Shard Tests
 * Split logger test into multiple functions
 
+### MDL Shard
+* Added mdl.full() function to get the raw list of the mdl
+
 ## 0.2.0
 ### General
 * Cleaned up Changelog.md
