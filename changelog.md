@@ -1,6 +1,10 @@
 # Changelog
 Logs are written that newest versions are at the top!
 
+## 0.2.1
+### Tests
+* Added MDL Shard Tests
+
 ## 0.2.0
 ### General
 * Cleaned up Changelog.md
