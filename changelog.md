@@ -1,6 +1,13 @@
 # Changelog
 Logs are written that newest versions are at the top!
 
+## 0.3.0
+### MDL Shard
+* Completely revamped the shard to work similarly to numpy
+
+### Tests
+* Completely changed MDL Shard tests to follow new structure
+
 ## 0.2.1
 ### Tests
 * Added MDL Shard Tests
