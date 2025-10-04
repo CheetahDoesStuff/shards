@@ -1,7 +1,15 @@
 class mdl:
-    def __init__(self, depth: int = 2) -> None:
-        self.md_list: list = []
+    def __init__(self, depth: int = 2, size: int = 10, default = None) -> None:
         self.depth = depth
+        self.size = size
+        self.val = default
+        self.md_list = self._rec_mklist(depth)
+
+    def _rec_mklist(self, d):
+        if d == 1:
+            return [self.val] * self.size
+        return [self._rec_mklist(d - 1) for _ in range(self.size)]
+
 
     def read(self, coords: tuple = ()):
         if len(coords) > self.depth: return None
@@ -12,4 +20,4 @@ class mdl:
         
         return curr
     
-    def set(self, coords, val):
+    def set(self, coords: tuple, val = "0"):
