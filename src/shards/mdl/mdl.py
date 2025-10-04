@@ -5,7 +5,7 @@ class mdl:
         self.depth = depth
         self.size = size
         self.val = default
-        self.md_list: Any = self._rec_mklist(depth)
+        self.data: Any = self._rec_mklist(depth)
 
     def _rec_mklist(self, d):
         if d == 1:
@@ -13,22 +13,10 @@ class mdl:
         return [self._rec_mklist(d - 1) for _ in range(self.size)]
 
 
-    def read(self, coords: tuple = ()):
-        if len(coords) > self.depth: raise ValueError(f"Shards: Coords must have {self.depth} elements (Following the lists depth)")
-
-        curr = self.md_list
-        for coord in coords:
-            curr = curr[coord]
-        
-        return curr
-    
-    def set(self, coords: tuple, val = "0"):
-        if len(coords) > self.depth: raise ValueError(f"Shards: Coords must have {self.depth} elements (Following the lists depth)")
-
-        curr = self.md_list
-        for coord in coords[:-1]:
-            curr = curr[coord]
-        curr[coords[-1]] = val
-
-    def full(self) -> list:
-        return self.md_list
+    def __getitem__(self, key):
+        if isinstance(key, tuple):
+            value = self.data
+            for k in key:
+                value = value[k]
+            return value
+        return self.data[key]
