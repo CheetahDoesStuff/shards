@@ -4,6 +4,7 @@ Logs are written that newest versions are at the top!
 ## 0.2.0
 ### General
 * Cleaned up Changelog.md
+* Published package to pypi
 
 ### MDL Shard
 * Added MDL Shard
