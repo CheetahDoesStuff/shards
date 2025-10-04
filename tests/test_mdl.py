@@ -36,6 +36,9 @@ def test_depth_3_structure():
     assert arr[1, 0, 0] == 7
 
 def test_independent_lists():
+
+    arr = mdl(depth=2, size=3, default=[])
+    print(arr[0,0] is arr[0,1])
     arr = mdl(depth=2, size=3, default=[])
     assert arr[0, 0] is not arr[0, 1]
     assert arr[0, 0] is not arr[1, 0]
