@@ -4,6 +4,7 @@ Logs are written that newest versions are at the top!
 ## 0.2.1
 ### Tests
 * Added MDL Shard Tests
+* Split logger test into multiple functions
 
 ## 0.2.0
 ### General

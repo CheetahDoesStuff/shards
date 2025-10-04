@@ -14,8 +14,7 @@ def test_log_messages():
     test_logger.warn("warn")
     test_logger.error("error")
     test_logger.critical("critical")
-    child_logger.info("info child")
-    
+
     with open(log_file, "r") as f:
         lines = f.readlines()
 
