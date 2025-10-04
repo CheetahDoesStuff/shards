@@ -1,11 +1,14 @@
 from shards import logger
-from pathlib import Path
 
+from pathlib import Path
+from shutil import rmtree
+
+rmtree("tmp/log")
 test_logger = logger("Test", do_log_saving=True, log_save_folder="tmp/log")
 child_logger = test_logger.make_child_logger("child")
 
 def test_log_messages():
-    test_logger.raw("a")
+    test_logger.raw("raw")
     test_logger.info("info")
     test_logger.warn("warn")
     test_logger.error("error")
@@ -16,7 +19,7 @@ def test_log_messages():
     with open(log_file, "r") as f:
         lines = f.readlines()
 
-    assert lines[0].strip() == "a"
+    assert lines[0].strip() == "raw"
     assert "( Test ) | [INFO] info" in lines[1]
     assert "( Test ) | [WARN] warn" in lines[2]
     assert "( Test ) | [ERROR] error" in lines[3]
