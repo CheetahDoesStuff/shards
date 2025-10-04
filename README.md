@@ -1,6 +1,8 @@
 # Shards
 *A nice small collection of handy tools*
 
+**Changelog:** [changelog.md](https://github.com/CheetahDoesStuff/shards/blob/release/changelog.md)
+
 **Note:** This is a temporary README, documentation will be availble soon after the first PyPi release
 
 ### What is this?
