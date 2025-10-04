@@ -1,9 +1,10 @@
+from __future__ import annotations
+
 from termcolor import colored
 from datetime import datetime
 from pathlib import Path
 import re
 from os import mkdir
-
 
 class Logger():
     def __init__(self, name: str,
