@@ -1,6 +1,8 @@
 # Shards
 *A nice small collection of handy tools*
 
+**Note:** This is a temporary README, documentation will be availble soon after the first PyPi release
+
 ### What is this?
 Shards is a small library made for a single reason, in smaller projects you
 maybe dont need an big library like numpy, but a single func from it, something simple like an multidimensional array etc. This is made to 
