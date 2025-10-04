@@ -29,3 +29,6 @@ class mdl:
         for coord in coords[:-1]:
             curr = curr[coord]
         curr[coords[-1]] = val
+
+    def full(self) -> list:
+        return self.md_list
