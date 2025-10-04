@@ -15,8 +15,8 @@ def test_get_specific_item():
     assert arr[0, 0] == "cool"
 
 def test_changing_values():
-    arr = mdl(depth=2, size=3, default=[])
-    arr[1, 1] = ["coolest"]
-    assert arr[1, 1] == ["coolest"]
-    assert arr[0, 0] == []
-    assert arr[1, 0] == []
+    arr = mdl(depth=2, size=3, default="cool")
+    arr[1, 1] = "coolest"
+    assert arr[1, 1] == "coolest"
+    assert arr[0, 0] == "cool"
+    assert arr[1, 0] == "cool"
