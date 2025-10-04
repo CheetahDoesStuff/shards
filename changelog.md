@@ -1,12 +1,20 @@
 # Changelog
 Logs are written that newest versions are at the top!
 
-## Pre-1.0
+## 0.1.1
+### Tests
+* Cleaned up logger testing, removing old test logs upon start
+* Added test coverage for the child logger functionality
 
-### 0.1.0 (First release)
+## 0.1.0 (First release)
+### General
 * Added README, uv bootstrapping etc
+* added pytest
+
+### Logging shard
 * Added logging shard
 * Added make_child_logger in logger shard
-* added pytest
+
+### Tests
 * added test_logging test
 aa
