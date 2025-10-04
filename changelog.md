@@ -1,7 +1,13 @@
 # Changelog
 Logs are written that newest versions are at the top!
 
-## 0.1.1
+## 0.2.0
+### General
+* Cleaned up Changelog.md
+
+### MDL Shard
+* Added MDL Shard
+
 ### Tests
 * Cleaned up logger testing, removing old test logs upon start
 * Added test coverage for the child logger functionality
