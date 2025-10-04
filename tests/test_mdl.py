@@ -6,7 +6,7 @@ def test_mdl_init():
     assert mdl.read(coords=(1, 1)) == "cool" # type: ignore
 
 def test_mdl_init_full():
-    assert mdl.full() == "[['cool', 'cool', 'cool'], ['cool', 'cooler', 'cool'], ['cool', 'cool', 'cool']]" # type: ignore
+    assert mdl.full() == [['cool', 'cool', 'cool'], ['cool', 'cool', 'cool'], ['cool', 'cool', 'cool']] # type: ignore
 
 def test_mdl_write():
     mdl.set(coords=(1, 1), val="cooler") # type: ignore
