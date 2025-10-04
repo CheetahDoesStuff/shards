@@ -24,4 +24,13 @@ def test_log_messages():
     assert "( Test ) | [WARN] warn" in lines[2]
     assert "( Test ) | [ERROR] error" in lines[3]
     assert "( Test ) | [CRITICAL] critical" in lines[4]
-    assert "( Test/child ) | [INFO] info child" in lines[5]
+
+def test_child_logger_messages():
+
+    child_logger.info("info - child")
+
+    log_file = Path(test_logger.save_folder) / f"{test_logger.start_timestamp}.log"
+    with open(log_file, "r") as f:
+        lines = f.readlines()
+
+    assert "( Test/child ) | [INFO] info - child" in lines[5]
