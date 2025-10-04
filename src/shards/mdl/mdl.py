@@ -20,3 +20,12 @@ class mdl:
                 value = value[k]
             return value
         return self.data[key]
+
+    def __setitem__(self, key, value):
+        if isinstance(key, tuple):
+            target = self.data
+            for k in key[:-1]:
+                target = target[k]
+            target[key[-1]] = value
+        else:
+            self.data[key] = value
