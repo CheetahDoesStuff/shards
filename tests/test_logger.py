@@ -6,6 +6,7 @@ from shutil import rmtree
 rmtree("tmp/log")
 test_logger = logger("Test", do_log_saving=True, log_save_folder="tmp/log")
 child_logger = test_logger.make_child_logger("child")
+log_file = Path(test_logger.save_folder) / f"{test_logger.start_timestamp}.log"
 
 def test_log_messages():
     test_logger.raw("raw")
@@ -14,8 +15,7 @@ def test_log_messages():
     test_logger.error("error")
     test_logger.critical("critical")
     child_logger.info("info child")
-
-    log_file = Path(test_logger.save_folder) / f"{test_logger.start_timestamp}.log"
+    
     with open(log_file, "r") as f:
         lines = f.readlines()
 
@@ -29,7 +29,6 @@ def test_child_logger_messages():
 
     child_logger.info("info - child")
 
-    log_file = Path(test_logger.save_folder) / f"{test_logger.start_timestamp}.log"
     with open(log_file, "r") as f:
         lines = f.readlines()
 
