@@ -24,6 +24,14 @@ def test_log_messages():
     assert "( Test ) | [ERROR] error" in lines[3]
     assert "( Test ) | [CRITICAL] critical" in lines[4]
 
+def test_log_space():
+    test_logger.space()
+
+    with open(log_file, "r") as f:
+        lines = f.readlines()
+
+    assert "\n" == lines[5]
+
 def test_child_logger_messages():
 
     child_logger.info("info - child")
@@ -31,4 +39,4 @@ def test_child_logger_messages():
     with open(log_file, "r") as f:
         lines = f.readlines()
 
-    assert "( Test/child ) | [INFO] info - child" in lines[5]
+    assert "( Test/child ) | [INFO] info - child" in lines[6]
