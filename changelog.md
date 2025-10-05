@@ -1,6 +1,12 @@
 # Changelog
 Logs are written that newest versions are at the top!
 
+## 0.3.1
+### Developement
+* Added Ruff linting and formatting
+* Added pre-commit
+* Added ruff-pre-commit hook
+
 ## 0.3.0
 ### MDL Shard
 * Completely revamped the shard to work similarly to numpy
