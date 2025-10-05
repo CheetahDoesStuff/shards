@@ -15,8 +15,8 @@ All commands related to the python enviorment or developement must be ran throug
 No, the python packages does not have to be installed manually, here we instead install the tools we need for the development process.
 
 The tools you need are:
-* Python (of course), to install, check out their [downloads page](https://www.python.org/downloads/)
-* Git, to install, check out their [downloads page](https://git-scm.com/downloads)
+* Python (of course), to get, check out their [downloads page](https://www.python.org/downloads/)
+* Git, to get, check out their [downloads page](https://git-scm.com/downloads)
 * Uv, to install, check out their [installation guide](https://docs.astral.sh/uv/getting-started/installation/)
 
 **Note:** these tools are NOT optional and are required for contributing to the repo!
