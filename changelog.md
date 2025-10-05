@@ -48,4 +48,3 @@ Logs are written that newest versions are at the top!
 
 ### Tests
 * added test_logging test
-aa
