@@ -1,6 +1,14 @@
-# Developement
+# Welcome!
 
 Everyone is welcome to contribute, but to keep the repo organized we have to follow the documentation!
+
+# Things to note
+
+## Everything through uv
+
+All commands related to the python enviorment or developement must be ran through uv using the `uv run` command, eg `uv run myfile.py`, `uv run pytest` or `uv run pip install -e .`
+
+# Getting started
 
 ## Installing dependencies
 
