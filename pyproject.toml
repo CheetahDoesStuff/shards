@@ -5,6 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "pre-commit>=4.3.0",
     "pytest>=8.4.2",
     "termcolor>=3.1.0",
 ]
+
+[tool.ruff]
+extend-exclude = ["src/shards/__init__.py"]
