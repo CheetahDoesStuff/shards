@@ -1,6 +1,7 @@
 from typing import Any
 import copy
 
+
 class mdl:
     def __init__(self, depth: int = 2, size: int = 10, default=None) -> None:
         self.depth = depth

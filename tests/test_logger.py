@@ -8,6 +8,7 @@ test_logger = logger("Test", do_log_saving=True, log_save_folder="tmp/log")
 child_logger = test_logger.make_child_logger("child")
 log_file = Path(test_logger.save_folder) / f"{test_logger.start_timestamp}.log"
 
+
 def test_log_messages():
     test_logger.raw("raw")
     test_logger.info("info")
@@ -24,6 +25,7 @@ def test_log_messages():
     assert "( Test ) | [ERROR] error" in lines[3]
     assert "( Test ) | [CRITICAL] critical" in lines[4]
 
+
 def test_log_space():
     test_logger.space()
 
@@ -32,8 +34,8 @@ def test_log_space():
 
     assert "\n" == lines[5]
 
-def test_child_logger_messages():
 
+def test_child_logger_messages():
     child_logger.info("info - child")
 
     with open(log_file, "r") as f:
