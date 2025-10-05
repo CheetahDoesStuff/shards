@@ -2,6 +2,9 @@
 Logs are written that newest versions are at the top!
 
 ## 0.3.1
+### Tests
+* Added test for logger.space() function
+
 ### Developement
 * Added Ruff linting and formatting
 * Added pre-commit
