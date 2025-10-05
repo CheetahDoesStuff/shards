@@ -29,6 +29,14 @@ To ensure a developement process with full cross platform compatability we use t
 
 ```sh
 uv sync
+uv venv install
 ```
 
-If you cloned the repository correctly, 
+If you cloned the repository correctly, this will use the uv.lock and pyproject.toml files to create the python enviorment and install the dependencies! Then, well need to set up pre-commit for formatting and linting, dont worry, its easy! Ruff already installed it for us, now we just have to run:
+
+```sh
+uv run pre-commit install
+uv run pre-commit run --all-files
+```
+
+The first command installs the pre-commit hooks, the seconds command then runs pre-commit once manually to ensure everything is formatted! Now youre all set and pre-commit will run every time you create a new git commit!
