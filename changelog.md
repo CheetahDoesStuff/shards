@@ -2,6 +2,8 @@
 Logs are written that newest versions are at the top!
 
 ## 0.3.1
+**Note:** Sorry for this being a small update, this update mostly consisted of writing documentation
+
 ### Tests
 * Added test for logger.space() function
 
